@@ -11,8 +11,6 @@ function App() {
   const num2 = useRef();
 
   const sumFn = (x, y) => {
-    console.log(MemoizedObj);
-
     return new Promise((resolve) => {
       if (MemoizedObj[x + "+" + y]) resolve(MemoizedObj[x + "+" + y]);
       setTimeout(() => {
@@ -27,7 +25,6 @@ function App() {
     sumFn(+num1.current.value, +num2.current.value).then((res) => {
       setSum(res);
     });
-    // setSum(+num1.current.value + +num2.current.value);
   };
   const handleCount = () => setCounter((c) => c + 1);
 
@@ -36,14 +33,10 @@ function App() {
     []
   );
 
-  // const LazyComponent = React.lazy(()=> import("./login"))
-
   return (
     <div>
       <PageHelmet title={"my counter"} description={"new disc"} />
       count: {count}
-      {/* <input type="number" ref={num1} />
-      <input type="number" ref={num2} /> */}
       {MemoizedButton}
     </div>
   );
