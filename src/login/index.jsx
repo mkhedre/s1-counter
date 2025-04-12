@@ -9,6 +9,7 @@ const Login = () => {
         <title>login</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
+      <p>login</p>
     </>
   );
 };
