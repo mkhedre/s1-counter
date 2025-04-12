@@ -25,7 +25,6 @@ const ProductList = () => {
       </Helmet>
       <h2>Product List</h2>
       <p>Liked: {likedProducts.join(", ")}</p>
-      {/* <button onClick={renameProduct}>Rename Product #1</button> */}
       {products.map((product, index) => (
         <ProductItem key={product.id} product={product} onLike={handleLike} />
       ))}
